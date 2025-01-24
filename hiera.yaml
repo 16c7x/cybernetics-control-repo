@@ -8,5 +8,11 @@ hierarchy:
   - name: "Yaml backend"
     data_hash: yaml_data
     paths:
-      - "nodes/%{trusted.certname}.yaml"
+      - "nodes/%{certname}.yaml"
+      - "roles/%{role}.yaml"
+      - "datacentre/%{location}.yaml"
+      - "applications/%{application}.yaml"
+      - "applications/%{application}/%{tier}.yaml"
+      - "os/%{facts.os.name}.yaml"
+      - "domain/%{::domain}.yaml"
       - "common.yaml"

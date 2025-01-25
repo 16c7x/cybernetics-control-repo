@@ -1,5 +1,5 @@
 #
-class trillian_user {
+class profile::trillian_user {
   file { '/tmp/trillian_user.sh' :
     ensure => 'file',
     source => 'puppet:///modules/usersprofile/trillian_user.sh',

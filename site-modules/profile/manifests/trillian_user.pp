@@ -2,7 +2,7 @@
 class profile::trillian_user {
   file { '/tmp/trillian_user.sh' :
     ensure => 'file',
-    source => 'puppet:///modules/usersprofile/trillian_user.sh',
+    source => 'puppet:///modules/profile/trillian_user.sh',
     mode   => '0755',
   }
 

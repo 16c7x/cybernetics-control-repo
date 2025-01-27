@@ -5,7 +5,7 @@
 # @example
 #   include webapp
 class webapp {
-  $port = '80',
+  $port = '80'
 
   file { '/etc/webapp.conf' :
     ensure => file,

@@ -4,9 +4,9 @@
 #
 # @example
 #   include webapp
-class webapp {
-  $port = '80'
-
+class webapp (
+  String $port
+){
   file { '/etc/webapp.conf' :
     ensure => file,
     content => "port: ${port}",

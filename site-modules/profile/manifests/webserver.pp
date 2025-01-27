@@ -1,6 +1,6 @@
 #
 class profile::webserver {
   class {'webapp':
-    port => '80',
+    port => '82',
   }
 }

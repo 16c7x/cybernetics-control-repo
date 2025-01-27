@@ -7,9 +7,8 @@
 class webapp {
   $port = '80',
 
-  file { /etc/webapp.conf :
+  file { '/etc/webapp.conf' :
     ensure => file,
     content => "port: ${port}",
   }
-
 }

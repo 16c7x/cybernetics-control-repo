@@ -1,7 +1,7 @@
 #
 class profile::webserver {
-  apache::vhost { 'vhost.example.com':
-    port    => 80,
-    #docroot => '/var/www/vhost',
-  }  
+  nginx::resource::server { 'kibana.myhost.com':
+    listen_port => 80,
+    #proxy       => 'http://localhost:5601',
+  }
 }

@@ -1,6 +1,8 @@
 #
-class profile::webserver {
+class profile::webserver (
+  String $port
+){
   class {'webapp':
-    port => '82',
+    port => $port,
   }
 }

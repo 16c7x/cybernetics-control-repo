@@ -6,8 +6,8 @@ class profile::db_user (
     ensure     => 'present',
     gid        => 'dba',
     home       => '/home/postgres',
-    managehome => 'true'
-    password   => $password,
+    managehome => 'true',
+    password   = $password,
     comment    => 'The Postgres user',
   }
 

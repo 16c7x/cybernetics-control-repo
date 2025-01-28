@@ -2,7 +2,7 @@
 class profile::db_user (
     String $private_key
 ){
-  $password='pass123'
+  $password=Sensitive('pass456')
   user { 'postgres':
     ensure     => 'present',
     gid        => 'dba',

@@ -1,6 +1,6 @@
 #
 class profile::db_user (
-  String $password
+  Sensitive $password
 ){
   user { 'postgres':
     ensure     => 'present',

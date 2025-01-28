@@ -2,5 +2,8 @@
 profile::baseline::source:
   - 216.239.35.3
 
-webapp::port: '81'
-profile::webserver::port: '83'
+webapp::port: '80'
+profile::webserver::docroot: '/var/www'
+profile::webserver::group: 'web_team'
+profile::webserver::port: '81'
+profile::db_user: 'database123'

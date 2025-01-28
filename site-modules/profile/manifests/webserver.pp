@@ -1,8 +1,12 @@
 #
 class profile::webserver (
   String $port
+  String $docroot
+  String $group
 ){
   class {'webapp':
-    port => $port,
+    port    => $port,
+    docroot => $docroot
+    group   => $group
   }
 }

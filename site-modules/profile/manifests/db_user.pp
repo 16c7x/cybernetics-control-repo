@@ -15,10 +15,10 @@ class profile::db_user (
   }
 
   file { '/home/postgres/key':
-    ensure => file,
-    owner  => postgres,
-    group  => dba,
-    mode   => '0600'
+    ensure  => file,
+    owner   => postgres,
+    group   => dba,
+    mode    => '0600',
     content => $private_key,
   }
 }

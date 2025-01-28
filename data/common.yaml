@@ -7,3 +7,6 @@ profile::webserver::docroot: '/var/www'
 profile::webserver::group: 'web_team'
 profile::webserver::port: '81'
 profile::db_user::password: 'database123'
+lookup_options:
+  profile::db_user::password:
+    convert_to: "Sensitive"

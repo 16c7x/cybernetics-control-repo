@@ -1,8 +1,5 @@
 #
-class profile::db_user (
-  #String $password
-  #password= Sensitive('password123')
-){
+class profile::db_user {
   $password = 'password123'
   user { 'postgres':
     ensure     => 'present',
@@ -10,7 +7,7 @@ class profile::db_user (
     home       => '/home/postgres',
     managehome => 'true',
     password   => $password,
-    comment    => 'The Postgres user',
+    comment    => $password,
   }
 
   group { 'dba':

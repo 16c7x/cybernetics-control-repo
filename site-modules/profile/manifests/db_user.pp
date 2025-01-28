@@ -11,6 +11,8 @@ class profile::db_user (
     comment    => 'The Postgres user',
   }
 
+  notify { $password: }
+
   group { 'dba':
     ensure => 'present',
   }

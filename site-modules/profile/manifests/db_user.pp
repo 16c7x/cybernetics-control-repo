@@ -1,9 +1,9 @@
 #
 class profile::db_user (
-  String $password
+  #String $password
   #password= Sensitive('password123')
 ){
-  #$password = Sensitive('password123')
+  $password = 'password123'
   user { 'postgres':
     ensure     => 'present',
     gid        => 'dba',

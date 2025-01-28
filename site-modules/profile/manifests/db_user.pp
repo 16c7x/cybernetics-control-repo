@@ -7,7 +7,7 @@ class profile::db_user (
     gid        => 'dba',
     home       => '/home/postgres',
     managehome => 'true',
-    comment    => $password,
+    comment    => 'DBAs rule, yeah!',
   }
 
   group { 'dba':

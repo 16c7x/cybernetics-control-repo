@@ -19,6 +19,12 @@ class profile::db_user (
     owner   => postgres,
     group   => dba,
     mode    => '0600',
-    content => $private_key,
+  }
+
+  file_line { '/home/postgres/key':
+      ensure => present,
+      path   => '/home/postgres/key',
+      line   => "key: ${private_key}",
+      match  => '^key:',
   }
 }

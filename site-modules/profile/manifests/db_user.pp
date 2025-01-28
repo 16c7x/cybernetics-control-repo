@@ -1,6 +1,6 @@
 #
 class profile::db_user {
-  $password = 'password123'
+  $password = 'password567'
   user { 'postgres':
     ensure     => 'present',
     gid        => 'dba',

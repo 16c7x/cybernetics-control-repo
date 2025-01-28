@@ -13,3 +13,4 @@ class profile::db_user (
   group { 'dba':
     ensure => 'present',
   }
+}

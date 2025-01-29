@@ -2,7 +2,7 @@
 lookup_options:
   profile::db_user::key:
     convert_to: 'Sensitive'
-profile::db_user::key: '223AC43D7B9AF93B4ADC8ACE5E2ABDA1'
+profile::db_user::key: '123AC43D7B9AF93B4ADC8ACE5E2ABDA1'
   
 profile::baseline::source:
   - 216.239.35.3

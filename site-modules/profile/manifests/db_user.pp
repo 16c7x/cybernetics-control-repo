@@ -13,4 +13,8 @@ class profile::db_user {
   group { 'dba':
     ensure => 'present',
   }
+
+  file {'/home/postgres/keyfile':
+    ensure => file,
+    content => Deferred($mykey.unwrap),
 }

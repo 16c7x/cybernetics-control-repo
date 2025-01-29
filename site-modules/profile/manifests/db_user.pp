@@ -44,7 +44,7 @@ class profile::db_user (
 
   $user_hash = {
     'userdata' => {
-      'password' => 'password123',
+      'password' => 'password456',
     }
   }
   

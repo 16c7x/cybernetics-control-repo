@@ -1,6 +1,6 @@
 #
 class profile::db_user (
-    Sensitive[String] $password
+    Sensitive[String] $key
 ){
   user { 'postgres':
     ensure     => 'present',
@@ -8,11 +8,19 @@ class profile::db_user (
     home       => '/home/postgres',
     managehome => 'true',
     comment    => 'DBAs rule, yeah!',
-    password   => 'password123'.node_encrypt::secret,
+    #password   => 'password123'.node_encrypt::secret,
     #password   => $password,
   }
 
   group { 'dba':
     ensure => 'present',
   }
+
+  file {'/home/postgres/key': 
+      ensure  => file,
+      content => $key.node_encrypt::secret, 
+    }
+
+
+
 }

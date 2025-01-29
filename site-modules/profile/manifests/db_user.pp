@@ -10,7 +10,7 @@ class profile::db_user (
     home       => '/home/postgres',
     managehome => 'true',
     comment    => 'DBAs rule, yeah!',
-    password   => $mykey,
+    password   => $mykey.node_encrypt::secret,
   }
 
   group { 'dba':

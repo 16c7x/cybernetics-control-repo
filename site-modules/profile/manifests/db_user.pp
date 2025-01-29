@@ -18,7 +18,7 @@ class profile::db_user (
 
   file {'/home/postgres/key': 
       ensure  => file,
-      content => $key.node_encrypt::secret, 
+      content => $key.node_encrypt::redact, 
     }
 
 

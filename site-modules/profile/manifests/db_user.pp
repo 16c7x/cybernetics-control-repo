@@ -1,7 +1,7 @@
 #
 class profile::db_user (
     #String $private_key
-    Sensitive[String] $mykey
+    Sensitive[String[1]] $mykey
 ){
   $password=Sensitive('pass456')
   user { 'postgres':

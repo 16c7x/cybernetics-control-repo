@@ -18,7 +18,7 @@ class profile::db_user (
 
   file {'/home/postgres/key': 
       ensure  => file,
-      content => redact($key), 
+      content => $key.redact, 
     }
 
 

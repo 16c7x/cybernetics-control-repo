@@ -10,7 +10,7 @@ class profile::db_user (
     home       => '/home/postgres',
     managehome => 'true',
     comment    => 'DBAs rule, yeah!',
-    #password   => $password.unwrap,
+    password   => $mykey,
   }
 
   group { 'dba':
@@ -24,12 +24,12 @@ class profile::db_user (
     mode    => '0600',
   }
 
-  #file_line { '/home/postgres/key':
-  #    ensure => present,
-  #    path   => '/home/postgres/key',
-  #    line   => "key: ${private_key}",
-  #    match  => '^key:',
-  #}
+  file_line { '/home/postgres/key':
+      ensure => present,
+      path   => '/home/postgres/key',
+      line   => "key: ${mykey}",
+      match  => '^key:',
+  }
 
   notify { 'secret message':
     message => $mykey,

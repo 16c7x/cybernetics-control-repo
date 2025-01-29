@@ -1,5 +1,7 @@
 #
-class profile::db_user {
+class profile::db_user (
+  Sensitive[String] $mykey
+  ){
   user { 'postgres':
     ensure     => 'present',
     gid        => 'dba',

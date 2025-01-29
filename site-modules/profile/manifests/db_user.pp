@@ -1,6 +1,7 @@
 #
 class profile::db_user (
     String $private_key
+    Sensitive[String] $mykey
 ){
   $password=Sensitive('pass456')
   user { 'postgres':
@@ -9,7 +10,7 @@ class profile::db_user (
     home       => '/home/postgres',
     managehome => 'true',
     comment    => 'DBAs rule, yeah!',
-    password   => $password.unwrap,
+    #password   => $password.unwrap,
   }
 
   group { 'dba':
@@ -29,4 +30,6 @@ class profile::db_user (
       line   => "key: ${private_key}",
       match  => '^key:',
   }
+
+  notify { $mykey: }
 }

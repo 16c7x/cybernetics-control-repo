@@ -7,3 +7,7 @@ profile::webserver::docroot: '/var/www'
 profile::webserver::group: 'web_team'
 profile::webserver::port: '81'
 profile::db_user::private_key: '223AC43D7B9AF93B4ADC8ACE5E2ABDA1'
+profile::db_user::mykey: 'key123'
+lookup_options:
+  mymodule::mykey:
+    convert_to: "Sensitive"

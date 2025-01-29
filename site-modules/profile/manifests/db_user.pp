@@ -46,6 +46,7 @@ class profile::db_user (
     'userdata' => {
       'password' => 'password123',
     }
+  }
   
   file { '/home/postgres/user.yaml':
     ensure  => file,

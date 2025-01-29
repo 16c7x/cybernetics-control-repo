@@ -15,9 +15,4 @@ class profile::db_user (
   group { 'dba':
     ensure => 'present',
   }
-
-  file {'/home/postgres/key': 
-      ensure  => file,
-      content => $mykey.node_encrypt::secret, 
-    }
 }

@@ -1,7 +1,7 @@
 ---
-lookup_options:
-  profile::db_user::mykey:
-    convert_to: 'Sensitive'
+#lookup_options:
+#  profile::db_user::mykey:
+#    convert_to: 'Sensitive'
 profile::db_user::mykey: '223AC43D7B9AF93B4ADC8ACE5E2ABDA1'
   
 profile::baseline::source:

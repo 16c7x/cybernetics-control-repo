@@ -1,6 +1,6 @@
 #
 class profile::db_user (
-  Sensitive[String] $mykey
+  String $mykey
   ){
   user { 'postgres':
     ensure     => 'present',
@@ -18,7 +18,7 @@ class profile::db_user (
 
   file {'/home/postgres/keyfile':
     ensure => file,
-    content => Deferred("node_decrypt", [$mykey.unwrap]),
+    content => Deferred("node_decrypt", [$mykey]),
   }
 }
 

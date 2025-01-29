@@ -18,7 +18,7 @@ class profile::db_user (
 
   file {'/home/postgres/keyfile':
     ensure => file,
-    content => Deferred($mykey),
+    content => Deferred("node_decrypt", [$mykey]),
   }
 }
 

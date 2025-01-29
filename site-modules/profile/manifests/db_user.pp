@@ -21,6 +21,8 @@ class profile::db_user (
       content => $key.node_encrypt::secret, 
     }
 
-
+  notify { 'password_notification':
+    message => redact("The key is: ${key.unwrap}"),
+  }
 
 }

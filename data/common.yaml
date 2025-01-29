@@ -2,7 +2,7 @@
 lookup_options:
   profile::db_user::password:
     convert_to: 'Sensitive'
-profile::db_user::password: 'postgres456'
+profile::db_user::password: 'postgres123'
   
 profile::baseline::source:
   - 216.239.35.3

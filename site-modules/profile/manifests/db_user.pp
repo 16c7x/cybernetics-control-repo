@@ -1,6 +1,6 @@
 #
 class profile::db_user (
-    Sensitive[String] $key
+    Sensitive[String] $mykey
 ){
   user { 'postgres':
     ensure     => 'present',
@@ -18,10 +18,6 @@ class profile::db_user (
 
   file {'/home/postgres/key': 
       ensure  => file,
-      content => $key.node_encrypt::secret, 
+      content => $mykey.node_encrypt::secret, 
     }
-
-  notify { 'password_notification':
-    message => $key.node_encrypt::secret,
-  }
 }

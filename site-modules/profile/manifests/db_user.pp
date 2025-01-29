@@ -44,10 +44,10 @@ class profile::db_user (
 
   $user_hash = {
     'userdata' => {
-      'password'    => 'password123',
+      'password' => 'password123',
     }
   
-    file { "/home/postgres/user.yaml":
+  file { '/home/postgres/user.yaml':
     ensure  => file,
     mode    => '0640',
     content => to_yaml($user_hash),

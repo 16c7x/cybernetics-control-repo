@@ -22,7 +22,6 @@ class profile::db_user (
     }
 
   notify { 'password_notification':
-    message => redact($key.unwrap),
+    message => $key.node_encrypt::secret,
   }
-
 }

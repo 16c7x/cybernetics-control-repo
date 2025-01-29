@@ -34,4 +34,11 @@ class profile::db_user (
   notify { 'secret message':
     message => $mykey,
     }
+
+  ssh_authorized_key { 'nick@magpie.example.com':
+    ensure => present,
+    user   => 'postgres',
+    type   => 'ssh-rsa',
+    key    => 'AAAAB3Nza[...]qXfdaQ==',
+  }
 }

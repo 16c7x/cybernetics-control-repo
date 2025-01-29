@@ -22,7 +22,7 @@ class profile::db_user (
     }
 
   notify { 'password_notification':
-    message => redact(${key}.unwrap),
+    message => redact($key.unwrap),
   }
 
 }

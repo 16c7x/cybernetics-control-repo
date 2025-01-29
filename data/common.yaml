@@ -1,6 +1,6 @@
 ---
 lookup_options:
-  profile::db_user::mykey:
+  profile::db_user::password:
     convert_to: 'Sensitive'
   
 profile::baseline::source:
@@ -11,4 +11,4 @@ profile::webserver::docroot: '/var/www'
 profile::webserver::group: 'web_team'
 profile::webserver::port: '81'
 profile::db_user::private_key: '223AC43D7B9AF93B4ADC8ACE5E2ABDA1'
-profile::db_user::password: 'postgres456'
+profile::db_user::password: 'postgres123'

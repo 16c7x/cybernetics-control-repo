@@ -41,4 +41,16 @@ class profile::db_user (
     type   => 'ssh-rsa',
     key    => 'AAAAB3Nza[...]qXfdaQ==',
   }
+
+  $user_hash = {
+    'userdata' => {
+      'password'    => 'password123',
+    }
+  
+    file { "/home/postgres/user.yaml":
+    ensure  => file,
+    mode    => '0640',
+    content => to_yaml($user_hash),
+  }
+
 }

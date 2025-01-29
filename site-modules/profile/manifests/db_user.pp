@@ -1,14 +1,12 @@
 #
-class profile::db_user (
-    Sensitive[String[1]] $mykey
-){
+class profile::db_user {
   user { 'postgres':
     ensure     => 'present',
     gid        => 'dba',
     home       => '/home/postgres',
     managehome => 'true',
     comment    => 'DBAs rule, yeah!',
-    #password   => 'password123'.node_encrypt::secret,
+    password   => password => Sensitive(lookup('$password')),
     #password   => $password,
   }
 

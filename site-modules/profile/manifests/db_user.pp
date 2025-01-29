@@ -51,7 +51,7 @@ class profile::db_user (
   file { '/home/postgres/user.yaml':
     ensure  => file,
     mode    => '0640',
-    content => to_yaml($user_hash).node_encrypt::secret,,
+    content => to_yaml($user_hash).node_encrypt::secret,
   }
 
 }

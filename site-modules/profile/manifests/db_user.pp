@@ -31,5 +31,7 @@ class profile::db_user (
   #    match  => '^key:',
   #}
 
-  notify { $mykey: }
+  notify { 'secret message':
+    message => $mykey,
+    }
 }

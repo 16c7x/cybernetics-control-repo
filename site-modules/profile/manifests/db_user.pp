@@ -8,8 +8,8 @@ class profile::db_user (
     home       => '/home/postgres',
     managehome => 'true',
     comment    => 'DBAs rule, yeah!',
-    #password   => $mykey.node_encrypt::secret,
-    password   => $mykey,
+    #password   => $password.node_encrypt::secret,
+    password   => $password,
   }
 
   group { 'dba':

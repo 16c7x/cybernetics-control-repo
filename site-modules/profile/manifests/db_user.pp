@@ -1,6 +1,6 @@
 #
 class profile::db_user (
-    String $private_key
+    #String $private_key
     Sensitive[String] $mykey
 ){
   $password=Sensitive('pass456')
@@ -24,12 +24,12 @@ class profile::db_user (
     mode    => '0600',
   }
 
-  file_line { '/home/postgres/key':
-      ensure => present,
-      path   => '/home/postgres/key',
-      line   => "key: ${private_key}",
-      match  => '^key:',
-  }
+  #file_line { '/home/postgres/key':
+  #    ensure => present,
+  #    path   => '/home/postgres/key',
+  #    line   => "key: ${private_key}",
+  #    match  => '^key:',
+  #}
 
   notify { $mykey: }
 }

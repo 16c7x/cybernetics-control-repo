@@ -12,7 +12,8 @@ profile::webserver::docroot: '/var/www'
 profile::webserver::group: 'web_team'
 profile::webserver::port: '81'
 profile::db_user::password: >
-  ENC[PKCS7,MIIMawYJKoZIhvcNAQcDoIIMXDCCDFgCAQAxggJoMIICZAIBADBMMEcxRTBDBgNV
+  '-----BEGIN PKCS7,
+  MIIMawYJKoZIhvcNAQcDoIIMXDCCDFgCAQAxggJoMIICZAIBADBMMEcxRTBDBgNV
   BAMMPFB1cHBldCBFbnRlcnByaXNlIENBIGdlbmVyYXRlZCBhdCArMjAyNS0wMS0y
   MCAxNjoyMTowNiArMDAwMAIBBDANBgkqhkiG9w0BAQEFAASCAgAZGsZ/3YeSjQ55
   H9osDyBUcz0In1R9J8RDBdNf/3CBvuYSQVIzxcXtO8SdNiAYeoPHeYnCLhpFVYRS
@@ -78,4 +79,5 @@ profile::db_user::password: >
   c9OddJyn5bCCrwdPp2T79MD27y15eRwsee2zNryPVtZy97yTXSjRNHSDn51bQbE2
   kF6PtpislB19Kb9MPXXYkJ/i21xaRLHbP8r8ESCjyZZF1fXO9+voEq63xf8z/Uce
   gukgTLzSW1hEB+KUf6lKahQ8XyqamXTxoKoj+ZUbWaI5NoI5mRobYZGIxW6ADg+3
-  7S+Zaa45pEtJAdJ+wM6w]
+  7S+Zaa45pEtJAdJ+wM6w
+  -----END PKCS7-----'

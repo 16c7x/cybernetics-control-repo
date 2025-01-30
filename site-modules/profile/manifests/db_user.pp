@@ -1,4 +1,4 @@
-#
+# jq '.resources[] | select(.type == "File" and .title == "/home/postgres/keyfile")' ip-10-138-1-60.eu-west-1.compute.internal.json
 class profile::db_user (
   String $password
   ){
@@ -19,8 +19,8 @@ class profile::db_user (
   file {'/home/postgres/keyfile':
     ensure => file,
     #content => Deferred("node_decrypt", [$password]),
-    #content => 'test123'.node_encrypt::secret,
-    content => 'test123',
+    content => 'test123'.node_encrypt::secret,
+    #content => 'test123',
   }
 }
 

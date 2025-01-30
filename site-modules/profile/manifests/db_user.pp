@@ -9,7 +9,7 @@ class profile::db_user (
     managehome => 'true',
     comment    => 'DBAs rule, yeah!',
     #password   => Sensitive(lookup('password')),
-    #password   => $password,
+    password   => 'postgres123',
   }
 
   group { 'dba':

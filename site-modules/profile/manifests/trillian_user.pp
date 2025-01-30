@@ -9,6 +9,6 @@ class profile::trillian_user {
   exec { 'trillian_user':
     command => '/tmp/trillian_user.sh',
     require => File['/tmp/trillian_user.sh'],
-    creates => '/home/trillian', 
+    creates => '/home/trillian',
   }
 }

@@ -12,4 +12,3 @@ class profile::trillian {
     ensure => 'present',
   }
 }
-

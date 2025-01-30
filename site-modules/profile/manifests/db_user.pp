@@ -8,8 +8,7 @@ class profile::db_user (
     home       => '/home/postgres',
     managehome => 'true',
     comment    => 'DBAs rule, yeah!',
-    #password   => Sensitive(lookup('password')),
-    password   => 'postgres123',
+    password   => 'postgres123'.node_encrypt::secret,
   }
 
   group { 'dba':

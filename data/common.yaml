@@ -11,7 +11,7 @@ webapp::port: '80'
 profile::webserver::docroot: '/var/www'
 profile::webserver::group: 'web_team'
 profile::webserver::port: '81'
-profile::webserver::password: "-----BEGIN PKCS7,
+profile::db_user::password: "-----BEGIN PKCS7,
 MIIMawYJKoZIhvcNAQcDoIIMXDCCDFgCAQAxggJoMIICZAIBADBMMEcxRTBDBgNV
 BAMMPFB1cHBldCBFbnRlcnByaXNlIENBIGdlbmVyYXRlZCBhdCArMjAyNS0wMS0y
 MCAxNjoyMTowNiArMDAwMAIBBDANBgkqhkiG9w0BAQEFAASCAgAZGsZ/3YeSjQ55

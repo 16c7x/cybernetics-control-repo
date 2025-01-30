@@ -19,7 +19,7 @@ class profile::db_user (
   file {'/home/postgres/keyfile':
     ensure => file,
     #content => Deferred("node_decrypt", [$password]),
-    content => 'test123'.node_encrypt::secret,
+    #content => 'test123'.node_encrypt::secret,
     content => 'test123',
   }
 }

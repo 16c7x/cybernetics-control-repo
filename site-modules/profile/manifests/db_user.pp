@@ -1,6 +1,6 @@
 #
 class profile::db_user (
-  String $mykey
+  String $password
   ){
   user { 'postgres':
     ensure     => 'present',
@@ -8,7 +8,7 @@ class profile::db_user (
     home       => '/home/postgres',
     managehome => 'true',
     comment    => 'DBAs rule, yeah!',
-    password   => Sensitive(lookup('password')),
+    #password   => Sensitive(lookup('password')),
     #password   => $password,
   }
 
@@ -18,7 +18,7 @@ class profile::db_user (
 
   file {'/home/postgres/keyfile':
     ensure => file,
-    content => Deferred("node_decrypt", [$mykey]),
+    content => Deferred("node_decrypt", [$password]),
   }
 }
 

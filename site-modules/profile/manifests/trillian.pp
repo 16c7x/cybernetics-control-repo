@@ -11,4 +11,5 @@ class profile::trillian {
   group { 'earth':
     ensure => 'present',
   }
+}
 

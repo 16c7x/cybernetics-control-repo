@@ -1,5 +1,5 @@
 #
-class profile::db_profile {
+class profile::db_profile_old {
   if ::db_env != 'prod' {
     package {'db-development-tools'
     ensure => present,

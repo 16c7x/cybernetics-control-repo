@@ -4,5 +4,6 @@ class profile::topscopetest {
 # look in site.pp
 # look on the host - facter whereami
 
-notify { $::whereami: }
+
+notify { $facts['whereami']: }
 }

@@ -1,6 +1,6 @@
 #
 class profile::topscopetest {
-$whereami = 'class'
+# $whereami = 'class' - doesn't work if called as $::whereami
 # look in site.pp
 # look on the host - facter whereami
 

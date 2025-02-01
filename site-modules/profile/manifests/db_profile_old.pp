@@ -1,7 +1,7 @@
 #
 class profile::db_profile_old {
   if ::db_env != 'prod' {
-    package { 'db-development-tools':
+    package { 'postgres-dev':
       ensure => present,
     }
   }

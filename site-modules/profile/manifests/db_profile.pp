@@ -1,11 +1,11 @@
 #
-class profile::db_profile_new {
+class profile::db_profile {
   if $facts['location'] == 'cybernetics_a' {
-    package { 'apache2-dev':
+    package { 'postgres-dev':
       ensure => absent,
     }
   } elsif $facts['location'] == 'cybernetics_b' {
-    package { 'apache2-dev':
+    package { 'postgres-dev':
       ensure => present,
     }
   } else {
